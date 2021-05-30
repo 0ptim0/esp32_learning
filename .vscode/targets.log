@@ -9,7 +9,7 @@ make: *** No rule to make target 'check_python_dependencies', needed by 'all'.  
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 30 20:50:59 2021
+# Make data base, printed on Sun May 30 21:49:38 2021
 
 # Variables
 
@@ -264,7 +264,7 @@ QT_IM_MODULE = ibus
 # environment
 SNAP_USER_DATA = /home/optim/snap/code/65
 # environment
-SHLVL = 1
+SHLVL = 0
 # makefile (from '/home/optim/esp32/esp-idf/make/project.mk', line 230)
 CC = gcc
 # makefile (from '/home/optim/esp32/esp-idf/make/project.mk', line 164)
@@ -273,8 +273,9 @@ SINGLE_COMPONENT_DIRS := /home/optim/esp32/projects/test/main
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 ADF_PATH = /home/optim/esp32/esp-adf
+ 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f1468f89-8afa-48a6-ae3d-132e1b1b77bd.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-52d3ad40-6302-422a-b178-7cec8e96ebc6.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -285,7 +286,6 @@ SNAP_REVISION = 65
 LC_MONETARY = ru_RU.UTF-8
 # makefile
 .DEFAULT_GOAL := all
- 
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # makefile (from '/home/optim/esp32/esp-idf/make/common.mk', line 83)
@@ -361,7 +361,7 @@ TEST_COMPONENT_PATHS :=
 # environment
 LC_ALL = C
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/d43e0033_ab86_482b_9e8c_7c76f47b15d2
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/5268efaa_fa71_44b1_b3e4_91e0f03943d7
 # automatic
 ^F = $(notdir $^)
 # makefile (from '/home/optim/esp32/esp-idf/make/project.mk', line 118)
@@ -371,7 +371,7 @@ OBJCOPY = objcopy
 # makefile (from '/home/optim/esp32/esp-idf/make/project_config.mk', line 31)
 SDKCONFIG_DEFAULTS = $(PROJECT_PATH)/sdkconfig.defaults
 # environment
-GNOME_TERMINAL_SERVICE = :1.1038
+GNOME_TERMINAL_SERVICE = :1.1753
 # default
 SUFFIXES := 
 # environment
@@ -413,13 +413,11 @@ COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE := /home/optim/esp32/projects/test/buil
 # makefile (from '/home/optim/esp32/esp-idf/make/project.mk', line 187)
 EXCLUDE_COMPONENTS = 
 # environment
-VSCODE_PID = 53029
+VSCODE_PID = 73317
 # makefile (from '/home/optim/esp32/esp-idf/make/project_config.mk', line 103)
 MENUCONFIG_STYLE = aquatic
-# environment
-python = /usr/bin/python3
 # variable set hash-table stats:
-# Load=199/1024=19%, Rehash=0, Collisions=136/973=14%
+# Load=198/1024=19%, Rehash=0, Collisions=136/972=14%
 
 # Pattern-specific Variable Values
 
@@ -427,12 +425,12 @@ python = /usr/bin/python3
 
 # Directories
 
-# . (device 2071, inode 939381): 9 files, no impossibilities.
+# . (device 2071, inode 939381): 11 files, no impossibilities.
 # /home/optim/esp32/projects/test/components: could not be stat'd.
 # /home/optim/esp32/esp-idf/components (device 2071, inode 3029341): 87 files, no impossibilities.
 # /home/optim/esp32/esp-idf/tools/kconfig (device 2071, inode 2517897): 36 files, no impossibilities.
 
-# 132 files, no impossibilities in 4 directories.
+# 134 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
@@ -537,6 +535,7 @@ all_binaries:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from '/home/optim/esp32/esp-idf/make/project_config.mk', line 165):
+ 
 	$(summary) GENCONFIG
 	$(call RunConfGen,)
 	touch $(SDKCONFIG_MAKEFILE) $(BUILD_DIR_BASE)/include/sdkconfig.h  # ensure newer than sdkconfig
@@ -547,7 +546,6 @@ all_binaries:
 #  Last modified 2021-05-29 12:53:25.630012889
 #  File has been updated.
 #  Successfully updated.
- 
 
 # Not a target:
 /home/optim/esp32/esp-idf/tools/kconfig/kxgettext.c:
@@ -813,6 +811,7 @@ help:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from '/home/optim/esp32/esp-idf/make/project.mk', line 25):
+ 
 	@echo "Welcome to Espressif IDF build system. Some useful make targets:"
 	@echo ""
 	@echo "make menuconfig - Configure IDF project"
@@ -835,7 +834,6 @@ help:
 	@echo "make app-flash - Flash just the app"
 	@echo "make app-clean - Clean just the app"
 	@echo "make print_flash_cmd - Print the arguments for esptool when flash"
- 
 	@echo "make check_python_dependencies - Check that the required python packages are installed"
 	@echo ""
 	@echo "See also 'make bootloader', 'make bootloader-flash', 'make bootloader-clean', "
@@ -1088,6 +1086,7 @@ menuconfig: /home/optim/esp32/esp-idf/tools/kconfig/mconf-idf | check_python_dep
 	$(summary) MENUCONFIG
 	$(call RunConfGen,--dont-write-deprecated)
 	# RunConfGen before menuconfig ensures that deprecated options won't be ignored (they've got renamed)
+ 
 	$(call RunMenuConf)
 	# RunConfGen after menuconfig ensures that deprecated options are appended to $(SDKCONFIG) for backward compatibility
 	$(call RunConfGen,)
@@ -1110,7 +1109,6 @@ build-components:
 #  Last modified 2021-05-29 12:53:25.626012898
 #  File has been updated.
 #  Successfully updated.
- 
 
 # Not a target:
 /home/optim/esp32/esp-idf/components/nvs_flash/Kconfig:
@@ -1203,7 +1201,7 @@ size-components:
 # Not a target:
 /home/optim/esp32/projects/test/main/Kconfig.projbuild:
 #  Implicit rule search has been done.
-#  Last modified 2021-05-29 12:53:26.118011
+#  Last modified 2021-05-30 21:29:16.907601676
 #  File has been updated.
 #  Successfully updated.
 
@@ -1215,12 +1213,12 @@ size-components:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 233 / storage = 5914 B / avg = 25 B
-# current buf: size = 8162 B / used = 5914 B / count = 233 / avg = 25 B
+# strcache buffers: 1 (0) / strings = 234 / storage = 5919 B / avg = 25 B
+# current buf: size = 8162 B / used = 5919 B / count = 234 / avg = 25 B
 
-# strcache performance: lookups = 291 / hit rate = 19%
+# strcache performance: lookups = 293 / hit rate = 20%
 # hash-table stats:
-# Load=233/8192=3%, Rehash=0, Collisions=10/291=3%
-# Finished Make data base on Sun May 30 20:50:59 2021
+# Load=234/8192=3%, Rehash=0, Collisions=10/293=3%
+# Finished Make data base on Sun May 30 21:49:38 2021
 
  
