@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/optim/esp32/projects/test'
+make: Leaving directory '/home/optim/esp32/projects/test'
+ 
+make: python: Command not found
+/bin/sh: 1: python: not found
+make: *** No rule to make target 'check_python_dependencies', needed by 'all'.
+ 
